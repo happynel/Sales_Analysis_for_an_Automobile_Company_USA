@@ -14,8 +14,6 @@ What are the Top Most-Profitable 5 States for the Bike product category in the U
 import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt
-
-
 print ("Packages Import;SUCCESSFUL")
 ```
 
@@ -28,6 +26,9 @@ print ("Packages Import;SUCCESSFUL")
 bikes_df =  pd.read_csv("C:/Users/HP/Desktop/_EXCLUSIVE DATA SCIENCE BOOT CAMP_STUDENT FOLDER/_DATASET/bikes.csv")
 bikes_df.head()
 ```
+
+![Data Science Project 1 _Data Reading](https://github.com/user-attachments/assets/810bbd82-f823-4e83-a79c-f57d540222a9)
+
 
 #### Data Modification
 ```Python
@@ -44,6 +45,9 @@ bikes_df["Profit"] = bikes_df["SalesRevenue"] - bikes_df["TotalCostPrice"]
 bikes_df.head()
 ```
 
+![Data sceince project 1_Data Modification](https://github.com/user-attachments/assets/6ffdd1e6-39d5-4ddd-9202-f95c1061cccf)
+
+
 ## DATA ANALYSIS
 ## Data Filtering 
 ```Python
@@ -58,6 +62,10 @@ top_most_5 = bikes_df[(is_a_usa) & (is_bike)]
 top_most_5
 ```
 
+
+![Data Science Project 1 _Data filtering](https://github.com/user-attachments/assets/29893aa2-6a3d-49c9-a4a1-75932bb6986f)
+
+
 #### Data Aggregation
 ```Python
 #Aggregating the total profit by United states for bikes sales 
@@ -67,6 +75,10 @@ top_most_5
 top_most_5 = top_most_5.pivot_table(values = "Profit", index = "CustomerState", aggfunc = np.sum)
 top_most_5
 ```
+
+
+![Data Science Project 1 _Data Aggregation](https://github.com/user-attachments/assets/c22f0537-ee29-4654-8ea4-4d60f7659cb0)
+
 
 #### Data Sorting
 ```Python
@@ -78,6 +90,9 @@ top_most_5
 top_most_5_states = top_most_5.sort_values("Profit", ascending = False)
 top_most_5_states
 ```
+
+![Data Science Project 1 _Data sorting](https://github.com/user-attachments/assets/c384b955-04de-4835-88b0-ded7e3e443c7)
+
 
 #### Result
 ```Python
@@ -91,6 +106,7 @@ most_profitable_5_US_states = top_most_5_states.head()
 most_profitable_5_US_states
 ```
 
+![Data Science Project 1 _Result](https://github.com/user-attachments/assets/93cc94ff-d79a-48d2-be55-4282ee8725d8)
 
 ## DATA VISUALIZATION
 ```Python
@@ -107,8 +123,7 @@ plt.xlabel("States")
 plt.show()
 ```
 
-
-
+![Data science project 1 screenshot](https://github.com/user-attachments/assets/56ab2c57-76bf-4cbc-be33-0800698a7fdb)
 
 
 
